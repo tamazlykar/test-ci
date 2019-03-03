@@ -35,10 +35,10 @@ echo "\n"
 
 echo "Multiple condidionals"
 
-if [[ "$CI_TYPE" == "MASTER" ]] && [[ "$CI_TYPE" == "PR" ]]; then
+if [[ "$CI_TYPE" =~ ^(MASTER|PR)$ ]]; then
   echo "MAster or PR"
 fi
 
-if [[ "$CI_TYPE" == "MASTER" ]] && [[ "$CI_TYPE" == "PR" ]] &&  [[ "$CI_TYPE" == "ON_DEMAND" ]]; then
+if [[ "$CI_TYPE" =~ ^(MASTER|PR|ON_DEMAND)$ ]]; then
   echo "Master or PR or On Demand"
 fi
