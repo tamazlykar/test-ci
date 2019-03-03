@@ -42,3 +42,8 @@ fi
 if [[ "$CI_TYPE" =~ ^(MASTER|PR|ON_DEMAND)$ ]]; then
   echo "Master or PR or On Demand"
 fi
+
+
+if [[ "$CI_TYPE" != "RELEASE" ]]; then
+  echo "NOT RELEASE"
+fi
