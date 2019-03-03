@@ -13,8 +13,6 @@ else
   exit 1;
 fi
 
-if [[ "$CI_TYPE" == "MASTER" ]] && [[ "$CI_TYPE" == "PR" ]] &&  [[ "$CI_TYPE" == "ON_DEMAND" ]]
-
 echo "First check"
 
 if [[ "$CI_TYPE" == "MASTER" ]]; then
@@ -44,4 +42,3 @@ fi
 if [[ "$CI_TYPE" == "MASTER" ]] && [[ "$CI_TYPE" == "PR" ]] &&  [[ "$CI_TYPE" == "ON_DEMAND" ]]; then
   echo "Master or PR or On Demand"
 fi
-
